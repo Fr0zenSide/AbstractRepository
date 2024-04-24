@@ -14,6 +14,28 @@
 		8015774B2BD8CB5800E53508 /* RepoProtoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015774A2BD8CB5800E53508 /* RepoProtoTestTests.swift */; };
 		801577552BD8CB5800E53508 /* RepoProtoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577542BD8CB5800E53508 /* RepoProtoTestUITests.swift */; };
 		801577572BD8CB5800E53508 /* RepoProtoTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577562BD8CB5800E53508 /* RepoProtoTestUITestsLaunchTests.swift */; };
+		801577642BD8CB9C00E53508 /* PocketListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577632BD8CB9C00E53508 /* PocketListContainer.swift */; };
+		801577672BD8CBC300E53508 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577652BD8CBC300E53508 /* User.swift */; };
+		801577682BD8CBC300E53508 /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577662BD8CBC300E53508 /* Relation.swift */; };
+		8015776B2BD8CC5100E53508 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015776A2BD8CC5100E53508 /* AddItemView.swift */; };
+		8015776D2BD8CC7D00E53508 /* RemoteUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015776C2BD8CC7D00E53508 /* RemoteUserRepository.swift */; };
+		801577702BD8CCA400E53508 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015776F2BD8CCA400E53508 /* UserRepositoryProtocol.swift */; };
+		801577772BD8CCE100E53508 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577722BD8CCE100E53508 /* EndPoint.swift */; };
+		801577782BD8CCE100E53508 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577732BD8CCE100E53508 /* NetworkService.swift */; };
+		801577792BD8CCE100E53508 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577742BD8CCE100E53508 /* NetworkError.swift */; };
+		8015777A2BD8CCE100E53508 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577752BD8CCE100E53508 /* NetworkProtocol.swift */; };
+		8015777B2BD8CCE100E53508 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577762BD8CCE100E53508 /* RequestMethod.swift */; };
+		8015777D2BD8CCF200E53508 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777C2BD8CCF200E53508 /* RepositoryProtocol.swift */; };
+		8015777F2BD8CD2000E53508 /* CRUDUseCasesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015777E2BD8CD2000E53508 /* CRUDUseCasesProtocol.swift */; };
+		801577822BD8CD6000E53508 /* UserUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577812BD8CD6000E53508 /* UserUseCaseMock.swift */; };
+		801577872BD8CE2100E53508 /* LoaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577852BD8CE2100E53508 /* LoaderImage.swift */; };
+		801577882BD8CE2100E53508 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577862BD8CE2100E53508 /* UserCellView.swift */; };
+		8015778B2BD8CE6B00E53508 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015778A2BD8CE6B00E53508 /* Data+Extensions.swift */; };
+		8015778D2BD8CE8A00E53508 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015778C2BD8CE8A00E53508 /* DateFormatter+Extensions.swift */; };
+		8015778F2BD8CEB800E53508 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8015778E2BD8CEB800E53508 /* String+Extensions.swift */; };
+		801577912BD8CED000E53508 /* PocketEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577902BD8CED000E53508 /* PocketEndPoint.swift */; };
+		801577932BD8E3FD00E53508 /* UserUsecasesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */; };
+		801577952BD8FC5900E53508 /* CRUDUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577942BD8FC5900E53508 /* CRUDUseCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +66,28 @@
 		801577502BD8CB5800E53508 /* RepoProtoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoProtoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		801577542BD8CB5800E53508 /* RepoProtoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoProtoTestUITests.swift; sourceTree = "<group>"; };
 		801577562BD8CB5800E53508 /* RepoProtoTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoProtoTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		801577632BD8CB9C00E53508 /* PocketListContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketListContainer.swift; sourceTree = "<group>"; };
+		801577652BD8CBC300E53508 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		801577662BD8CBC300E53508 /* Relation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
+		8015776A2BD8CC5100E53508 /* AddItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		8015776C2BD8CC7D00E53508 /* RemoteUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteUserRepository.swift; sourceTree = "<group>"; };
+		8015776F2BD8CCA400E53508 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		801577722BD8CCE100E53508 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		801577732BD8CCE100E53508 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		801577742BD8CCE100E53508 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		801577752BD8CCE100E53508 /* NetworkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		801577762BD8CCE100E53508 /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		8015777C2BD8CCF200E53508 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		8015777E2BD8CD2000E53508 /* CRUDUseCasesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUDUseCasesProtocol.swift; sourceTree = "<group>"; };
+		801577812BD8CD6000E53508 /* UserUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUseCaseMock.swift; sourceTree = "<group>"; };
+		801577852BD8CE2100E53508 /* LoaderImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderImage.swift; sourceTree = "<group>"; };
+		801577862BD8CE2100E53508 /* UserCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		8015778A2BD8CE6B00E53508 /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		8015778C2BD8CE8A00E53508 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		8015778E2BD8CEB800E53508 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		801577902BD8CED000E53508 /* PocketEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketEndPoint.swift; sourceTree = "<group>"; };
+		801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecasesProtocol.swift; sourceTree = "<group>"; };
+		801577942BD8FC5900E53508 /* CRUDUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDUseCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +140,14 @@
 			children = (
 				801577392BD8CB5600E53508 /* RepoProtoTestApp.swift */,
 				8015773B2BD8CB5600E53508 /* ContentView.swift */,
+				8015776A2BD8CC5100E53508 /* AddItemView.swift */,
+				801577842BD8CE0900E53508 /* Presentation */,
+				801577712BD8CCD800E53508 /* HTTPNetwork */,
+				801577802BD8CD2700E53508 /* UseCases */,
+				8015776E2BD8CC8400E53508 /* Repositories */,
+				801577692BD8CBC700E53508 /* Models */,
+				801577832BD8CD6400E53508 /* Mocks */,
+				801577892BD8CE5800E53508 /* Tools */,
 				8015773D2BD8CB5700E53508 /* Assets.xcassets */,
 				8015773F2BD8CB5700E53508 /* Preview Content */,
 			);
@@ -125,6 +177,76 @@
 				801577562BD8CB5800E53508 /* RepoProtoTestUITestsLaunchTests.swift */,
 			);
 			path = RepoProtoTestUITests;
+			sourceTree = "<group>";
+		};
+		801577692BD8CBC700E53508 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				801577632BD8CB9C00E53508 /* PocketListContainer.swift */,
+				801577662BD8CBC300E53508 /* Relation.swift */,
+				801577652BD8CBC300E53508 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8015776E2BD8CC8400E53508 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				801577902BD8CED000E53508 /* PocketEndPoint.swift */,
+				8015777C2BD8CCF200E53508 /* RepositoryProtocol.swift */,
+				8015776F2BD8CCA400E53508 /* UserRepositoryProtocol.swift */,
+				8015776C2BD8CC7D00E53508 /* RemoteUserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		801577712BD8CCD800E53508 /* HTTPNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				801577722BD8CCE100E53508 /* EndPoint.swift */,
+				801577742BD8CCE100E53508 /* NetworkError.swift */,
+				801577752BD8CCE100E53508 /* NetworkProtocol.swift */,
+				801577732BD8CCE100E53508 /* NetworkService.swift */,
+				801577762BD8CCE100E53508 /* RequestMethod.swift */,
+			);
+			path = HTTPNetwork;
+			sourceTree = "<group>";
+		};
+		801577802BD8CD2700E53508 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				8015777E2BD8CD2000E53508 /* CRUDUseCasesProtocol.swift */,
+				801577942BD8FC5900E53508 /* CRUDUseCases.swift */,
+				801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		801577832BD8CD6400E53508 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				801577812BD8CD6000E53508 /* UserUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		801577842BD8CE0900E53508 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				801577852BD8CE2100E53508 /* LoaderImage.swift */,
+				801577862BD8CE2100E53508 /* UserCellView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		801577892BD8CE5800E53508 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8015778C2BD8CE8A00E53508 /* DateFormatter+Extensions.swift */,
+				8015778A2BD8CE6B00E53508 /* Data+Extensions.swift */,
+				8015778E2BD8CEB800E53508 /* String+Extensions.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +379,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8015778B2BD8CE6B00E53508 /* Data+Extensions.swift in Sources */,
+				8015778F2BD8CEB800E53508 /* String+Extensions.swift in Sources */,
+				8015777B2BD8CCE100E53508 /* RequestMethod.swift in Sources */,
+				801577782BD8CCE100E53508 /* NetworkService.swift in Sources */,
+				801577822BD8CD6000E53508 /* UserUseCaseMock.swift in Sources */,
+				801577702BD8CCA400E53508 /* UserRepositoryProtocol.swift in Sources */,
+				801577672BD8CBC300E53508 /* User.swift in Sources */,
+				8015776B2BD8CC5100E53508 /* AddItemView.swift in Sources */,
+				8015777F2BD8CD2000E53508 /* CRUDUseCasesProtocol.swift in Sources */,
+				801577882BD8CE2100E53508 /* UserCellView.swift in Sources */,
+				801577772BD8CCE100E53508 /* EndPoint.swift in Sources */,
+				8015776D2BD8CC7D00E53508 /* RemoteUserRepository.swift in Sources */,
+				801577682BD8CBC300E53508 /* Relation.swift in Sources */,
+				801577872BD8CE2100E53508 /* LoaderImage.swift in Sources */,
+				801577642BD8CB9C00E53508 /* PocketListContainer.swift in Sources */,
+				8015778D2BD8CE8A00E53508 /* DateFormatter+Extensions.swift in Sources */,
+				8015777A2BD8CCE100E53508 /* NetworkProtocol.swift in Sources */,
 				8015773C2BD8CB5600E53508 /* ContentView.swift in Sources */,
+				801577912BD8CED000E53508 /* PocketEndPoint.swift in Sources */,
+				801577792BD8CCE100E53508 /* NetworkError.swift in Sources */,
+				801577932BD8E3FD00E53508 /* UserUsecasesProtocol.swift in Sources */,
 				8015773A2BD8CB5600E53508 /* RepoProtoTestApp.swift in Sources */,
+				8015777D2BD8CCF200E53508 /* RepositoryProtocol.swift in Sources */,
+				801577952BD8FC5900E53508 /* CRUDUseCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

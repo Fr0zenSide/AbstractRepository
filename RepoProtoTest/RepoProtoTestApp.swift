@@ -11,7 +11,7 @@ import SwiftUI
 struct RepoProtoTestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AddItemView(getAllUsers: GetAllUseCase(repository: RemoteUserRepository()))
         }
     }
 }
