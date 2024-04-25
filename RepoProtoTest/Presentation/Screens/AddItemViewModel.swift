@@ -23,11 +23,6 @@ extension AddItemView {
         // MARK: - Variables
         // Private variables
         
-//        private var getAllUsersUseCase: any GetCollectionOnOneRepositoryUseCaseProtocol<RemoteUserRepository>
-        
-//        private var listUseCase: any GetCollectionUseCaseProtocol
-//        private var searchUseCase: (any GetCollectionUseCaseProtocol)? = nil
-//
         private var listUseCase: ContentListCollectionType
         private var searchUseCase: ContentSearchCollectionType? = nil
         
@@ -37,26 +32,9 @@ extension AddItemView {
         
         private(set) var title: String = "Add new Relation"
         @Published private(set) var errorMessage: String? = nil
-//        @Published private(set) var profiles: [User] = []
-//        @Published private(set) var profilesResult: PocketListContainer<User>? = nil
         
-//        @Published private(set) var listResult: (any Collection<GetCollectionUseCaseProtocol.ResponseModel>)? = nil
-//        @Published private(set) var searchResult: (any Collection<GetCollectionUseCaseProtocol.ResponseModel>)? = nil
-//
-        
-//        @Published private(set) var listResult: (any RandomAccessCollection<ListCollectionType.ResponseModel>)? = nil
         @Published private(set) var listResult: ContentListCollectionType.CollectionType? = nil
-//        @Published private(set) var searchResul (any RandomAccessCollection<ListCollectionType.ResponseModel>)? = nil
         @Published private(set) var searchResult: ContentSearchCollectionType.CollectionType? = nil
-//        var explicitSearchResult: [SearchCollectionType.ResponseModel] {
-//            get {
-//                guard let dataSource: [SearchCollectionType.ResponseModel] = searchResult as? [SearchCollectionType.ResponseModel]
-//                else {
-//                    return []
-//                }
-//                return dataSource
-//            }
-//        }
         
         // Animation flags
         @Published var hideLoading: Bool        = true
@@ -79,28 +57,6 @@ extension AddItemView {
             
             initScreen()
         }
-//
-//        init(_ list: some GetCollectionUseCaseProtocol,
-//            with search: (some GetCollectionUseCaseProtocol)? = nil) {
-//            print("🐞 init ViewModel in", #fileID)
-//            
-//            listUseCase = list
-//            searchUseCase = search
-//            
-//            initScreen()
-//        }
-//        
-//        init(_ getAllUsers: some GetCollectionOnOneRepositoryUseCaseProtocol<RemoteUserRepository>
-//             //getAllUsers: some GetAllUseCase<RemoteUserRepository>
-////             getAllUsers: some OnlineGetAllUseCaseProtocol<RemoteUserRepository>
-////             getAllUsers: some GetAllUserUseCaseProtocol
-//            ) {
-//            print("🐞 init ViewModel in", #fileID)
-////            getAllUsersUseCase = getAllUsers
-//            listUseCase = getAllUsers
-//            
-//            initScreen()
-//        }
         
         private func initScreen() {
             print("🐞 \(#fileID) \(#function)")
@@ -125,7 +81,6 @@ extension AddItemView {
             print("add a new user:", user)
         }
         
-        
         func getList() {
             Task {
                 await fetchList()
@@ -144,14 +99,11 @@ extension AddItemView {
         private func fetchList() async {
             do {
                 let result = try await listUseCase.execute([:])
-                //FIXME: feed the right property to feed default list
                 print("See the default list result:", result)
                 listResult = result
             } catch {
                 // FIXME: need to display error
                 print("⚠️ Error:", error)
-                // FIXME: empty the right property to empty the default list
-//                profiles = []
                 listResult = nil
             }
         }
@@ -166,29 +118,11 @@ extension AddItemView {
             }
             
             do {
-                let result/*: PocketListContainer<User>*/ = try await searchUseCase.execute([
+                let result = try await searchUseCase.execute([
                     "query": query/*.lowercased()*/,
-                    "userId": "il0anx20mfzmkju"])/* as! PocketListContainer<User>*/ // FIXME: remove hard coded id here 👈
-                // Manage that 👇👇👇👇
-                // exclude current profileId from search
+                    "userId": "il0anx20mfzmkju"]) // FIXME: remove hard coded id here 👈
                 
-//                profiles = result.filter { $0.id != profile.id && !excludeProfileIds.contains($0.id) }
-//                profiles = result as! [User]
-//                profiles = result as! PocketListContainer<User>
-                
-//                if result is PocketListContainer<User> {
-//                    profilesResult = result as! PocketListContainer<User>
-//                    profiles = profilesResult!.items as! [User]
-//                } else {
-//                    profiles = []
-//                }
-                
-//                guard let typedResult = result as? PocketListContainer<User> else {
-//                    profiles = []
-//                    return
-//                }
-//                profilesResult = typedResult
-//                profiles = typedResult.items // FIXME: Here we need to use directly our Collection not .items
+                // searchResult = result.items // FIXME: Here we need to use directly our Collection not .items
                 searchResult = result
             } catch {
                 // FIXME: need to display error

@@ -142,8 +142,6 @@
 			children = (
 				801577392BD8CB5600E53508 /* RepoProtoTestApp.swift */,
 				8015773B2BD8CB5600E53508 /* ContentView.swift */,
-				8015776A2BD8CC5100E53508 /* AddItemView.swift */,
-				801577962BD9121800E53508 /* AddItemViewModel.swift */,
 				801577842BD8CE0900E53508 /* Presentation */,
 				801577712BD8CCD800E53508 /* HTTPNetwork */,
 				801577802BD8CD2700E53508 /* UseCases */,
@@ -236,8 +234,8 @@
 		801577842BD8CE0900E53508 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				801577852BD8CE2100E53508 /* LoaderImage.swift */,
-				801577862BD8CE2100E53508 /* UserCellView.swift */,
+				801577992BDA364000E53508 /* Screens */,
+				801577982BDA363300E53508 /* Components */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -250,6 +248,24 @@
 				8015778E2BD8CEB800E53508 /* String+Extensions.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		801577982BDA363300E53508 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				801577852BD8CE2100E53508 /* LoaderImage.swift */,
+				801577862BD8CE2100E53508 /* UserCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		801577992BDA364000E53508 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8015776A2BD8CC5100E53508 /* AddItemView.swift */,
+				801577962BD9121800E53508 /* AddItemViewModel.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
