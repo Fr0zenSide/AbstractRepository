@@ -36,6 +36,7 @@
 		801577912BD8CED000E53508 /* PocketEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577902BD8CED000E53508 /* PocketEndPoint.swift */; };
 		801577932BD8E3FD00E53508 /* UserUsecasesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */; };
 		801577952BD8FC5900E53508 /* CRUDUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577942BD8FC5900E53508 /* CRUDUseCases.swift */; };
+		801577972BD9121800E53508 /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801577962BD9121800E53508 /* AddItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		801577902BD8CED000E53508 /* PocketEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketEndPoint.swift; sourceTree = "<group>"; };
 		801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecasesProtocol.swift; sourceTree = "<group>"; };
 		801577942BD8FC5900E53508 /* CRUDUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDUseCases.swift; sourceTree = "<group>"; };
+		801577962BD9121800E53508 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				801577392BD8CB5600E53508 /* RepoProtoTestApp.swift */,
 				8015773B2BD8CB5600E53508 /* ContentView.swift */,
 				8015776A2BD8CC5100E53508 /* AddItemView.swift */,
+				801577962BD9121800E53508 /* AddItemViewModel.swift */,
 				801577842BD8CE0900E53508 /* Presentation */,
 				801577712BD8CCD800E53508 /* HTTPNetwork */,
 				801577802BD8CD2700E53508 /* UseCases */,
@@ -399,6 +402,7 @@
 				8015773C2BD8CB5600E53508 /* ContentView.swift in Sources */,
 				801577912BD8CED000E53508 /* PocketEndPoint.swift in Sources */,
 				801577792BD8CCE100E53508 /* NetworkError.swift in Sources */,
+				801577972BD9121800E53508 /* AddItemViewModel.swift in Sources */,
 				801577932BD8E3FD00E53508 /* UserUsecasesProtocol.swift in Sources */,
 				8015773A2BD8CB5600E53508 /* RepoProtoTestApp.swift in Sources */,
 				8015777D2BD8CCF200E53508 /* RepositoryProtocol.swift in Sources */,

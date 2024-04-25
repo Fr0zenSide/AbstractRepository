@@ -14,8 +14,8 @@ public struct RemoteUserRepository: UserRepositoryProtocol {
         self.networkService = networkService
     }
     
-    public func getAll(_ params: [String : String]) async throws -> any Collection<OutputModelType> {
-        guard let query = params["query"], 
+    public func getAll(_ params: [String : String]) async throws -> CollectionType {
+        guard let query = params["query"],
               let userId = params["userId"]
         else {
             preconditionFailure("Missing minimum configuration to use: [RemoteUserRepository.getAll([:])]")
@@ -26,7 +26,7 @@ public struct RemoteUserRepository: UserRepositoryProtocol {
         let excludeCurrentUser = "id!='\(userId)'"
         let filters = ["filter": "(\(searchUser) && \(excludeCurrentUser))"]
         let endPoint = PocketEndPoint.list(filters)
-        let result: PocketListContainer<User> = try await self.networkService.sendRequest(endpoint: endPoint)
+        let result: CollectionType = try await self.networkService.sendRequest(endpoint: endPoint)
         return result
     }
     
@@ -45,7 +45,7 @@ public struct RemoteUserRepository: UserRepositoryProtocol {
         preconditionFailure("Not implemented yet!")
     }
     
-    public func updateAll(with data: any Collection<OutputModelType>) async throws {
+    public func updateAll(with data: CollectionType) async throws {
         // TODO: out of scope for the moment
         preconditionFailure("Not implemented yet!")
     }

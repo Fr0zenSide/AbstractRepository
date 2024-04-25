@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct PocketListContainer<Item: Decodable>: MutableCollection, BidirectionalCollection/*Collection*/, Decodable, Hashable {
+public struct PocketListContainer<Item: Decodable>: MutableCollection, RandomAccessCollection, Decodable, Hashable {
     public typealias Item = Decodable
     public typealias Index = Int
     public typealias Element = Item
@@ -31,9 +31,6 @@ public extension PocketListContainer {
     var endIndex: Index { items.endIndex }
     
     subscript(position: Index) -> Element {
-//        _read {
-//            return items[position]
-//        }
         get {
             precondition(position >= startIndex && position < endIndex, "Index out of range")
             return items[position]
@@ -41,9 +38,6 @@ public extension PocketListContainer {
         set(newValue) {
             precondition(position >= startIndex && position < endIndex, "Index out of range")
             items[position] = newValue
-//            var productsInCategory = self[product.category]
-//                    productsInCategory.append(product)
-//                    self[product.category] = productsInCategory
         }
     }
     

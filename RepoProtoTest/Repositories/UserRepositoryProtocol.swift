@@ -7,4 +7,7 @@
 
 import Foundation
 
-public protocol UserRepositoryProtocol: RepositoryProtocol where InputModelType == User, OutputModelType == User {}
+public protocol UserRepositoryProtocol: RepositoryProtocol 
+                    where InputModelType  == User,
+                          OutputModelType == User,
+                          CollectionType  == PocketListContainer<OutputModelType> {}

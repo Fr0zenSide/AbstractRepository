@@ -13,13 +13,19 @@ enum CRUDUseCasesError: Error {
 }
 
 public protocol GetCollectionUseCaseProtocol<ResponseModel> {
-    associatedtype ResponseModel: Decodable
+    associatedtype ResponseModel: Decodable & Identifiable
+    associatedtype CollectionType: RandomAccessCollection
+                        where CollectionType.Element: Identifiable,
+                              CollectionType.Element == ResponseModel
+//    associatedtype ResponseModel: Decodable & Hashable
     
-    func execute(_ params: [String: String]) async throws -> any Collection<ResponseModel>
+//    func execute(_ params: [String: String]) async throws -> any RandomAccessCollection<ResponseModel>
+    func execute(_ params: [String: String]) async throws -> CollectionType
 }
 
 public protocol GetUseCaseProtocol<ResponseModel> {
-    associatedtype ResponseModel: Decodable
+    associatedtype ResponseModel: Decodable & Identifiable
+//    associatedtype ResponseModel: Decodable & Hashable
     
     func execute(_ params: [String: String]) async throws -> ResponseModel
 }
@@ -39,5 +45,6 @@ public protocol GetCollectionWithFallbackUseCaseProtocol<FirstRepository, Second
                     where ResponseModel == FirstRepository.OutputModelType,
                           ResponseModel == SecondRepository.OutputModelType {
     associatedtype FirstRepository: RepositoryProtocol
+                        where FirstRepository.CollectionType == SecondRepository.CollectionType
     associatedtype SecondRepository: RepositoryProtocol
 }

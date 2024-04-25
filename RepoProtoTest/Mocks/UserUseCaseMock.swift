@@ -33,11 +33,10 @@ import Foundation
 }
 
 struct UserUseCaseMock: GetAllUserUseCaseProtocol {
-//struct UserUseCaseMock: GetCollectionOnOneRepositoryUseCaseProtocol {
     typealias Repository = RemoteUserRepository
-//    typealias ResponseModel = Repository.OutputModelType
+    typealias CollectionType = [ResponseModel]
     
-    func execute(_ params: [String: String]) async throws -> any Collection<ResponseModel> {
+    func execute(_ params: [String: String]) async throws -> CollectionType {
         UserModelMock.list()
     }
 }

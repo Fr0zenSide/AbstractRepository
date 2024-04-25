@@ -12,8 +12,9 @@ import Foundation
  
  */
 final class GetAllUseCase<RepositoryType: RepositoryProtocol>: GetCollectionOnOneRepositoryUseCaseProtocol {
-    typealias Repository = RepositoryType
-    typealias ResponseModel = RepositoryType.OutputModelType
+    typealias Repository     = RepositoryType
+    typealias ResponseModel  = RepositoryType.OutputModelType
+    typealias CollectionType = Repository.CollectionType
     
     private let repository: Repository
     
@@ -21,7 +22,7 @@ final class GetAllUseCase<RepositoryType: RepositoryProtocol>: GetCollectionOnOn
         self.repository = repository
     }
     
-    func execute(_ params: [String : String]) async throws -> any Collection<ResponseModel> {
+    func execute(_ params: [String : String]) async throws -> CollectionType {
         do {
             let list = try await repository.getAll(params)
             return list
@@ -46,7 +47,9 @@ final class GetAllUseCase<RepositoryType: RepositoryProtocol>: GetCollectionOnOn
  
  */
 final class GetAllWithFallbackUseCase<FirstRepositoryType: RepositoryProtocol, SecondRepositoryType: RepositoryProtocol>: GetCollectionWithFallbackUseCaseProtocol
-                where FirstRepositoryType.OutputModelType == SecondRepositoryType.OutputModelType {
+                where FirstRepositoryType.OutputModelType == SecondRepositoryType.OutputModelType,
+                      FirstRepositoryType.CollectionType == SecondRepositoryType.CollectionType {
+    
     typealias FirstRepository   = FirstRepositoryType
     typealias SecondRepository  = SecondRepositoryType
     typealias ResponseModel     = FirstRepository.OutputModelType
@@ -59,7 +62,7 @@ final class GetAllWithFallbackUseCase<FirstRepositoryType: RepositoryProtocol, S
         self.secondRepository = secondRepository
     }
     
-    func execute(_ params: [String : String]) async throws -> any Collection<ResponseModel> {
+    func execute(_ params: [String : String]) async throws -> FirstRepositoryType.CollectionType {
         do {
             let list = try await firstRepository.getAll(params)
             try? await secondRepository.updateAll(with: list)
