@@ -38,12 +38,16 @@ struct AddItemView<ListCollectionType: GetCollectionUseCaseProtocol, SearchColle
                 }
             }
             .navigationTitle("Find new relations")
-            .searchable(text: $query, prompt: "Search relations")
+//            .navigationBarTitleDisplayMode(.large)
+            // TODO: have a search bar displayed when the screen appear, the list is empty or when we scroll back 
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search relations")
+            .onSubmit(of: .search, viewModel.launchSearch)
             .onChange(of: query) { _, newQuery in
                 Task { await viewModel.search(matching: query) }
             }
             .refreshable {
-                await viewModel.reload()
+                viewModel.launchSearch()
+//                await viewModel.reload()
             }
         }
     }

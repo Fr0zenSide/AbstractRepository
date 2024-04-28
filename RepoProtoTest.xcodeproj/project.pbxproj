@@ -90,6 +90,7 @@
 		801577922BD8E3FD00E53508 /* UserUsecasesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUsecasesProtocol.swift; sourceTree = "<group>"; };
 		801577942BD8FC5900E53508 /* CRUDUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDUseCases.swift; sourceTree = "<group>"; };
 		801577962BD9121800E53508 /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		8015779A2BDA52E000E53508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 		801577382BD8CB5600E53508 /* RepoProtoTest */ = {
 			isa = PBXGroup;
 			children = (
+				8015779A2BDA52E000E53508 /* Info.plist */,
 				801577392BD8CB5600E53508 /* RepoProtoTestApp.swift */,
 				8015773B2BD8CB5600E53508 /* ContentView.swift */,
 				801577842BD8CE0900E53508 /* Presentation */,
@@ -589,6 +591,7 @@
 				DEVELOPMENT_TEAM = L8NRHDDSWG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RepoProtoTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -618,6 +621,7 @@
 				DEVELOPMENT_TEAM = L8NRHDDSWG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RepoProtoTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
